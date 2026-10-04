@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexora Labs — Software &amp; Digital Products</title>
+<meta name="description" content="Nexora Labs is an independent software and technology studio creating Android apps, games, tools, web apps and digital products.">
+<meta name="keywords" content="Nexora Labs, software, Android apps, Android applications, mobile apps, games, tools, utilities, web apps, technology, digital products, software studio">
+<meta name="author" content="Nexora Labs">
+<meta name="theme-color" content="#050b1a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nexora Labs">
+<meta property="og:title" content="Nexora Labs — Software &amp; Digital Products">
+<meta property="og:description" content="Independent software and technology studio creating useful digital products.">
+<meta property="og:image" content="https://i.postimg.cc/FzRnYzRp/file-000000007c088207be82aa04ce89ac84.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="https://i.postimg.cc/FzRnYzRp/file-000000007c088207be82aa04ce89ac84.png">
+<link rel="apple-touch-icon" href="https://i.postimg.cc/FzRnYzRp/file-000000007c088207be82aa04ce89ac84.png">
+<style>
+:root{
+  --bg:#050b1a;--bg2:#0a1428;--text:#f4f8ff;--muted:#a9b6cc;
+  --cyan:#22d3ee;--blue:#3b82f6;--violet:#8b5cf6;
+  --glass:rgba(255,255,255,.045);--line:rgba(148,190,255,.16);
+  --r:16px;--wrap:1160px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--cyan);color:#001018;padding:8px 14px;border-radius:8px;z-index:200}
+.skip:focus{left:8px}
+
+/* Header */
+header{position:sticky;top:0;z-index:100;background:rgba(5,11,26,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;letter-spacing:.2px}
+.brand img{width:40px;height:40px;object-fit:contain;transition:transform .3s}
+.brand:hover img{transform:scale(1.07)}
+nav ul{list-style:none;display:flex;gap:6px;margin:0;padding:0}
+nav a{display:block;padding:8px 14px;border-radius:10px;color:var(--muted);font-size:.95rem;transition:color .2s,background .2s}
+nav a:hover{color:var(--text);background:var(--glass)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:var(--glass);border-radius:12px;cursor:pointer;padding:0;position:relative}
+.burger span{position:absolute;left:12px;right:12px;height:2px;background:var(--text);border-radius:2px;transition:transform .3s,opacity .2s,top .3s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+
+/* Hero */
+.hero{position:relative;padding:88px 0 96px;overflow:hidden;background:radial-gradient(900px 480px at 78% 0%,rgba(34,211,238,.14),transparent 60%),radial-gradient(700px 460px at 8% 30%,rgba(59,130,246,.15),transparent 60%),linear-gradient(180deg,var(--bg2),var(--bg))}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.badge{display:inline-block;padding:7px 14px;border:1px solid var(--line);background:var(--glass);border-radius:999px;color:var(--cyan);font-size:.88rem;margin-bottom:22px}
+h1{font-size:clamp(2.1rem,5.4vw,3.8rem);line-height:1.1;margin:0 0 20px;letter-spacing:-.02em}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:clamp(1rem,2.2vw,1.18rem);max-width:56ch;margin:0 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:12px;font-weight:600;font-size:.98rem;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;max-width:100%;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#02101c;box-shadow:0 8px 24px rgba(34,211,238,.2)}
+.btn-p:hover{box-shadow:0 12px 30px rgba(34,211,238,.32)}
+.btn-s{background:var(--glass);border-color:var(--line);color:var(--text)}
+.btn-s:hover{background:rgba(255,255,255,.09)}
+.logo-stage{display:grid;place-items:center;aspect-ratio:1/1;max-width:400px;width:100%;margin:0 auto;border-radius:32px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);box-shadow:0 0 90px rgba(34,211,238,.13),inset 0 0 60px rgba(59,130,246,.07);padding:12%}
+.logo-stage img{width:100%;height:100%;object-fit:contain;transition:transform .5s}
+.logo-stage:hover img{transform:scale(1.04)}
+
+/* Sections */
+section{padding:92px 0}
+.alt{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.head{max-width:680px;margin:0 0 48px}
+.head.c{margin-left:auto;margin-right:auto;text-align:center}
+h2{font-size:clamp(1.7rem,3.8vw,2.5rem);line-height:1.2;margin:0 0 14px;letter-spacing:-.015em}
+h3{font-size:1.15rem;margin:0 0 8px}
+.head p,.muted{color:var(--muted);margin:0}
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--glass);border:1px solid var(--line);border-radius:var(--r);padding:28px;backdrop-filter:blur(10px);transition:transform .25s,border-color .25s,background .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(34,211,238,.4);background:rgba(255,255,255,.07)}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+.ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;margin-bottom:18px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.25);color:var(--cyan)}
+.ico svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.v .ico{color:#a78bfa;background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.28)}
+
+/* About */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+.about p{color:var(--muted);margin:0;font-size:1.04rem}
+.panel{background:var(--glass);border:1px solid var(--line);border-radius:20px;padding:30px;backdrop-filter:blur(12px);box-shadow:0 0 60px rgba(59,130,246,.08)}
+.panel dl{margin:0}
+.panel dt{color:var(--cyan);font-size:.9rem;margin-top:18px}
+.panel dt:first-child{margin-top:0}
+.panel dd{margin:3px 0 0;font-weight:600}
+
+/* Mission */
+.mission{max-width:760px;margin:0 auto 44px;text-align:center}
+.mission p{color:var(--muted);font-size:1.12rem;margin:0}
+
+/* Contact */
+.contact{text-align:center;max-width:720px;margin:0 auto;padding:56px 28px;border-radius:24px;border:1px solid var(--line);background:radial-gradient(500px 220px at 50% 0%,rgba(34,211,238,.1),transparent 70%),var(--glass)}
+.contact p{color:var(--muted);margin:0 0 28px}
+.contact p.mail{margin:0 0 22px;font-weight:600;font-size:clamp(.95rem,3.6vw,1.2rem);overflow-wrap:anywhere}
+.contact p.mail a{color:var(--cyan);border-bottom:1px solid rgba(34,211,238,.4);transition:border-color .2s}
+.contact p.mail a:hover{border-color:var(--cyan)}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:56px 0 28px;background:#030812}
+.foot{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.foot .brand img{width:44px;height:44px}
+.foot p{color:var(--muted);margin:12px 0 0;font-size:.95rem}
+.foot h3{font-size:.95rem;color:var(--text)}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px}
+.foot li{color:var(--muted);font-size:.95rem}
+.copy{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+
+/* Motion */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .hero .wrap,.about{grid-template-columns:1fr}
+  .logo-stage{max-width:280px;order:-1}
+  .hero{padding:56px 0 72px}
+}
+@media(max-width:760px){
+  .burger{display:block}
+  nav{position:absolute;top:68px;left:0;right:0;background:rgba(5,11,26,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .25s}
+  nav.open{max-height:360px;opacity:1}
+  nav ul{flex-direction:column;padding:12px 20px 18px;gap:2px}
+  nav a{padding:13px 14px;font-size:1rem}
+  section{padding:68px 0}
+  .foot{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .g3,.g4{grid-template-columns:1fr}
+  .btn{width:100%}
+  .card,.panel{padding:24px}
+  .contact{padding:40px 20px}
+}
+@media(max-width:360px){
+  .wrap{padding:0 16px}
+  .brand{font-size:1rem}
+  h1{font-size:1.9rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#home" aria-label="Nexora Labs home">
+      <img src="https://i.postimg.cc/FzRnYzRp/file-000000007c088207be82aa04ce89ac84.png" alt="Nexora Labs official logo" width="40" height="40">
+      <span>Nexora Labs</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav id="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="home" style="padding-top:88px">
+    <div class="wrap">
+      <div>
+        <span class="badge">Independent Software &amp; Technology Studio</span>
+        <h1>Building <em>Better Digital</em> Experiences.</h1>
+        <p class="lead">Nexora Labs creates useful, modern and user-friendly Android apps, games, tools, web apps and digital products for users around the world.</p>
+        <div class="btns">
+          <a class="btn btn-p" href="#products">Explore Our Products</a>
+          <a class="btn btn-s" href="#about">About Nexora Labs</a>
+        </div>
+      </div>
+      <div class="logo-stage">
+        <img src="https://i.postimg.cc/FzRnYzRp/file-000000007c088207be82aa04ce89ac84.png" alt="Nexora Labs official logo" width="320" height="320">
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="wrap">
+      <div class="head c rv">
+        <h2>What We Build</h2>
+        <p>Software designed with simplicity, performance and usability in mind.</p>
+      </div>
+      <div class="grid g3">
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
+          <h3>Android Apps</h3><p>Practical mobile applications designed for everyday digital needs.</p>
+        </article>
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="7" width="19" height="10.5" rx="5"/><path d="M8 10.5v3.5M6.25 12.25h3.5M15.5 11.5h.01M17.5 13.5h.01"/></svg></div>
+          <h3>Games</h3><p>Engaging and lightweight games focused on enjoyable user experiences.</p>
+        </article>
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 4.9 4.9l-9 9a2.1 2.1 0 0 1-3-3l9-9a4 4 0 0 0-1.9-1.9z"/></svg></div>
+          <h3>Tools &amp; Utilities</h3><p>Helpful tools that make common tasks faster and easier.</p>
+        </article>
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="14" rx="2"/><path d="M3 9h18M7 6.8h.01M10 6.8h.01"/></svg></div>
+          <h3>Web Apps</h3><p>Responsive browser-based experiences for mobile and desktop users.</p>
+        </article>
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l5.5 3.5-5.5 3.5z"/></svg></div>
+          <h3>Entertainment</h3><p>Digital products built around media, discovery and entertainment.</p>
+        </article>
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM18.5 15.5l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg></div>
+          <h3>More Digital Products</h3><p>We continuously explore new technologies and useful product ideas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="about">
+    <div class="wrap">
+      <div class="head rv"><h2>About Nexora Labs</h2></div>
+      <div class="about">
+        <p class="rv">Nexora Labs is an independent software and technology studio focused on creating useful, modern and innovative digital products. We develop Android applications, games, utilities, entertainment apps, web-based software and other digital products designed with simplicity and performance in mind. Our goal is to provide reliable and user-friendly digital experiences for users around the world. Nexora Labs continuously explores new technologies and ideas to build practical software that makes everyday digital experiences easier, faster and more enjoyable.</p>
+        <aside class="panel rv" aria-label="Organization information">
+          <dl>
+            <dt>Organization</dt><dd>Nexora Labs</dd>
+            <dt>Type</dt><dd>Independent Software &amp; Technology Studio</dd>
+            <dt>Focus</dt><dd>Apps • Games • Tools • Web Apps</dd>
+            <dt>Approach</dt><dd>Simple • Useful • Modern</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission">
+    <div class="wrap">
+      <div class="mission rv">
+        <h2>Our Mission</h2>
+        <p>Our mission is to turn practical ideas into simple, accessible and enjoyable digital products while continuously exploring new technologies and improving the way people interact with software.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card rv"><h3>Innovation</h3><p>Exploring new ideas and technologies.</p></div>
+        <div class="card rv"><h3>Simplicity</h3><p>Making software easy to understand and use.</p></div>
+        <div class="card rv"><h3>Quality</h3><p>Focusing on reliable and enjoyable digital experiences.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt v" id="why">
+    <div class="wrap">
+      <div class="head c rv"><h2>Why Nexora Labs</h2></div>
+      <div class="grid g4">
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></div>
+          <h3>User First</h3><p>Products are designed with usability and accessibility in mind.</p>
+        </article>
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></div>
+          <h3>Innovation</h3><p>We continuously explore new ideas and technologies.</p>
+        </article>
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.3 9.5"/></svg></div>
+          <h3>Practicality</h3><p>We focus on useful products that solve real digital needs.</p>
+        </article>
+        <article class="card rv">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.5-5.8M20 4v4.5h-4.5"/></svg></div>
+          <h3>Continuous Improvement</h3><p>We keep improving our products and learning from feedback.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact rv">
+        <h2>Get in Touch</h2>
+        <p>For software information, product feedback or business inquiries, please use the official contact information associated with Nexora Labs.</p>
+        <p class="mail"><a href="mailto:mijan01981225975@gmail.com">mijan01981225975@gmail.com</a></p>
+        <a class="btn btn-p" href="mailto:mijan01981225975@gmail.com?subject=Nexora%20Labs%20Inquiry">Contact Nexora Labs</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand">
+          <img src="https://i.postimg.cc/FzRnYzRp/file-000000007c088207be82aa04ce89ac84.png" alt="Nexora Labs official logo" width="44" height="44" loading="lazy">
+          <span>Nexora Labs</span>
+        </div>
+        <p>Independent Software &amp; Technology Studio</p>
+        <p>Better Apps, Bigger Dreams</p>
+      </div>
+      <div>
+        <h3>Categories</h3>
+        <ul>
+          <li>Apps</li><li>Games</li><li>Tools</li><li>Web Apps</li><li>Entertainment</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© <span id="year">2026</span> Nexora Labs. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  var burger=document.getElementById('burger'),nav=document.getElementById('nav');
+  function setMenu(o){
+    nav.classList.toggle('open',o);
+    burger.setAttribute('aria-expanded',o);
+    burger.setAttribute('aria-label',o?'Close menu':'Open menu');
+  }
+  burger.addEventListener('click',function(){setMenu(!nav.classList.contains('open'))});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+  window.addEventListener('resize',function(){if(window.innerWidth>760)setMenu(false)});
+
+  var items=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+    },{threshold:.12});
+    items.forEach(function(el){io.observe(el)});
+  }else{items.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
